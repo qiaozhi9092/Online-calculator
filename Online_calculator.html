@@ -1,0 +1,370 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<title>Hw3</title>
+
+
+
+<script type="text/javascript">
+
+
+var number_in_text="";
+var n1;
+var n2;
+var operator;
+var answer;
+var count=0;
+     
+     
+     
+     
+     function display(num) {
+        var node = document.getElementById("display");  
+		node.value=num;
+     }
+
+	 function click9(){
+	 	number_in_text+=9;
+		display(number_in_text);
+	 }
+
+	 function click8(){
+	 	number_in_text+=8;
+		display(number_in_text);
+	 }
+	 
+	 function click7(){
+	 	number_in_text+=7;
+		display(number_in_text);
+	 }
+	 
+	 function click6(){
+	 	number_in_text+=6;
+		display(number_in_text);
+	 }
+	 
+	 function click5(){
+	 	number_in_text+=5;
+		display(number_in_text);
+	 }
+	 
+	 function click4(){
+	 	number_in_text+=4;
+		display(number_in_text);
+	 }
+	 
+	 function click3(){
+	 	number_in_text+=3;
+		display(number_in_text);
+	 }
+	 
+	 function click2(){
+	 	number_in_text+=2;
+		display(number_in_text);
+	 }
+	 
+	 function click1(){
+	 	number_in_text+=1;
+		display(number_in_text);
+	 }
+	 
+	 function click0(){
+	 	number_in_text+=0;
+		display(number_in_text);
+	 }
+	 
+	 function dot(){
+	 	number_in_text+=".";
+		display(number_in_text);
+	 }
+	 
+	 function divide(){
+	 	count++;
+	 	if(count==1){
+	 	n1=parseFloat(number_in_text);
+	 	number_in_text="";
+	 	operator="/";
+	 	
+	 	}
+	 	
+	 	else if(count>=2){
+			equals();
+			n1=answer;
+			operator="/";}
+	 }
+	 
+	 function multiply(){
+	 count++
+	 if(count==1){
+	 n1=parseFloat(number_in_text);
+	 	number_in_text="";
+	 	operator="*";
+	 }
+	 
+	 else if(count>=2){
+			equals();
+			n1=answer;
+			operator="*";}
+	 
+	 }
+	 
+	 function add(){
+	 count++
+	 if(count==1){
+	 n1=parseFloat(number_in_text);
+	 	number_in_text="";
+	 	operator="+";
+	 }
+	 
+	 else if(count>=2){
+			equals();
+			n1=answer;
+			operator="+";}
+	 
+	 }
+	 
+	 function minus(){
+	 count++
+	 if(count==1){
+	 n1=parseFloat(number_in_text);
+	 	number_in_text="";
+	 	operator="-";
+	 }
+	 
+	 else if(count>=2){
+			equals();
+			n1=answer;
+			operator="-";}
+	 
+	 }
+	 
+	 function square(){
+	  count++
+	 if(count==1){
+	 n1=parseFloat(number_in_text);
+	 	number_in_text="";
+	 	operator="^";
+	 }
+	 
+	 else if(count>=2){
+			equals();
+			n1=answer;
+			operator="^";}
+	 
+	
+	 	answer=n1*n1;
+		display(answer);
+	 }
+	 
+	 
+
+	 
+	 function clear(){
+	 	operator="";
+		n1="";
+		n2="";
+	 }
+	 
+	 function equals(){
+	 	
+	 	n2=parseFloat(number_in_text);
+	 	number_in_text="";
+	 	if (operator=="/"){
+	 	answer=n1/n2;
+	 	}
+	 	else if (operator=="*"){
+	 	answer=n1*n2;
+	 	}
+	 	else if (operator=="+"){
+	 	answer=n1+n2;
+	 	}
+	 	else if (operator=="-"){
+	 	answer=n1-n2;
+	 	}
+	 	else if (operator=="^"){
+	 	answer=n1*n1;
+	 	}
+	 	display(answer);
+		clear();
+	 }
+	 
+
+	 
+
+
+</script>
+
+
+
+<style type="text/css">
+table {
+margin:0px;
+top:0px;
+}
+
+#display{
+margin:0px;
+bottom:0px;
+}
+
+
+.box
+{
+background-color:#3d4543;
+
+border-radius:10px;
+position:absolute;
+
+
+} 
+
+p a {
+position: relative;
+top:220px;
+
+
+}
+
+
+#display
+{
+position:relative;
+left:5px;
+top:5px;
+height:20px;
+color:black;
+background-color:#bccd95;
+font-size:10px;
+text-align:right;
+} 
+
+
+.button
+{
+width:20px;
+
+border:none;
+border-radius:2px;
+margin-left:5px;
+cursor:pointer;
+border-top:2px solid transparent;
+}
+
+.button.pink
+{
+color:black;
+background-color:#ff4561;
+border-bottom:black 2px solid;
+}
+.button.black
+{
+color:black;
+background-color:303030;
+border-bottom:black 2px solid;
+border-top:2px 303030 solid;
+}
+
+
+.pink:active
+{
+border-top:black 2px solid;
+border-bottom:#ff4561 2px solid;
+}
+.black:active
+{
+border-top:black 2px solid;
+border-bottom:#303030 2px solid;
+}
+
+
+
+</style>
+</head>
+
+
+
+
+
+
+<body>
+<h1>Simple calculator</h1>
+
+
+
+
+
+
+
+<div class="box">
+<div class="keys">
+
+<form action="" method="get">
+<p>
+	<input type="text" id="display"/>
+</p>
+</form>
+
+
+<table>
+  <tr>
+    <td>
+    	<input type="button" name="7" value="7" class="button black" onclick="click7()" /> 
+    	<input type="button" name="8" value="8" class="button black" onclick="click8()" />
+    	<input type="button" name="9" value="9" class="button black" onclick="click9()" />
+    	<input type="button" name="/" value="/" class="button pink" onclick="divide()" />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+    	<input type="button" name="4" value="4" class="button black" onclick="click4()" /> 
+    	<input type="button" name="5" value="5" class="button black" onclick="click5()" />
+    	<input type="button" name="6" value="6" class="button black" onclick="click6()" />
+    	<input type="button" name="*" value="*" class="button pink" onclick="multiply()" />
+    </td>
+    </tr>
+    
+   <tr>
+    <td>
+    	<input type="button" name="3" value="3" class="button black" onclick="click3()" /> 
+    	<input type="button" name="2" value="2" class="button black" onclick="click2()" />
+    	<input type="button" name="1" value="1" class="button black" onclick="click1()" />
+    	<input type="button" name="-" value="-" class="button pink" onclick="minus()" />
+     </td>
+    </tr>
+    
+   <tr>
+    <td>
+    	<input type="button" name="." value="." class="button black" onclick="dot()" /> 
+    	<input type="button" name="0" value="0" class="button black" onclick="click0()" />
+    	<input type="button" name="=" value="=" class="button black" onclick="equals()" />
+    	<input type="button" name="+" value="+" class="button pink" onclick="add()" />
+     </td>
+    </tr>
+	
+	<tr>
+	<td>
+		<input type="button" name="x" value="^2" class="button black" onclick="square()" /> 
+	</td>
+	
+	</tr>
+</table>
+</div>
+</div>
+
+
+
+
+
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img
+     src="http://www.w3.org/Icons/valid-xhtml11"
+     alt="Valid XHTML 1.1" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>
